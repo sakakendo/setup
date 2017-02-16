@@ -1,0 +1,11 @@
+02/16/17 21:05:03
+02/16/17 21:06:03
+Filesystem     1K-blocks    Used Available Use% Mounted on
+dev               966788       0    966788   0% /dev
+run               971072    1272    969800   1% /run
+/dev/mmcblk0p2  27453556 4981964  21053968  20% /
+tmpfs             971072      88    970984   1% /dev/shm
+tmpfs             971072       0    971072   0% /sys/fs/cgroup
+tmpfs             971072       8    971064   1% /tmp
+/dev/mmcblk0p1    523248    3880    519368   1% /boot/efi
+tmpfs             194212      20    194192   1% /run/user/1000
