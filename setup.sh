@@ -15,6 +15,7 @@ dotfiles(){
 
 installPackage(){
 	echo installPackage
+	sudo pacman-mirrors -g
 	pacman -S zsh
 	chsh -s /usr/bin/zsh
 }
