@@ -9,6 +9,8 @@ git_config(){
 
 dotfiles(){
 	echo dotfiles
+	curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh >install.sh
+	sh ./installer.sh ~/.vim/bundle
 	cp ./dotfiles/.vimrc ~
 	cp ./dotfiles/.zshrc ~
 }
@@ -18,6 +20,7 @@ installPackage(){
 	sudo pacman-mirrors -g
 	pacman -S zsh
 	chsh -s /usr/bin/zsh
+	pacman -S i3status i3-wm i3lock dmenu
 }
 
 rmPackage(){
@@ -39,21 +42,9 @@ lang(){
 	else 
 		echo not found
 	fi
-	cat ./dotfiles/.xprofile >> ~/.xprofile
-	cat ./dotfiles/.zshrc_fcitx	>> ~/.zshrc
+#	cat ./dotfiles/.xprofile >> ~/.xprofile
+#	cat ./dotfiles/.zshrc_fcitx	>> ~/.zshrc
 }
 
 echo setup.sh
-main(){
-	lang
-	touch log
-#sh log.sh
-#installPackage
-#rmPackage
-#dotfiles
-#git_config
-#reboot
-
-
-
-}
+dotfiles
